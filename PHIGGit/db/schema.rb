@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_30_201315) do
+ActiveRecord::Schema.define(version: 2018_08_30_202947) do
 
+  create_table "stories", force: :cascade do |t|
+    t.text "text"
+    t.text "title"
+    t.string "img_url"
+    t.integer "vote_count"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  
   create_table "comments", force: :cascade do |t|
     t.string "username"
     t.text "text"
