@@ -21,5 +21,23 @@ ActiveRecord::Schema.define(version: 2018_08_30_202947) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+  
+  create_table "comments", force: :cascade do |t|
+    t.string "username"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+  
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "password"
+    t.string "password_confirmation"
+    t.string "username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end    
 
 end
