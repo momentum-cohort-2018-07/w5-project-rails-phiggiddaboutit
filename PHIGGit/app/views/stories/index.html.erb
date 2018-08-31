@@ -5,9 +5,11 @@
 
 <% @stories.each do |story| %>
 <div class="phigg_container">
-    <div class="phigg_header"><%= story.title %></div>
+    <div class="phigg_header"><%= link_to "#{story.title}", story_path(story.id) %></div>
     <div class="phigg_body"></div>
-    <div class="phigg_footer">Created by: <%= story.user_id %> on <%= story.timestamp %>. <%# vote_count here somehow? %></div>
+
+  
+
 </div>
 <% end %>
 
