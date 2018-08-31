@@ -9,6 +9,8 @@ class StoriesController < ApplicationController
     end
 
     def new
+=begin    redirect_to new_session_path if !
+=end
         @story = Story.new
     end
 
