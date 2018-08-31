@@ -1,6 +1,8 @@
 <h1>PHIGGit</h1>
 <h3>Story Listings</h3>
 
+<%= link_to 'Log out', session_path, method: :delete %>
+
 <p><%= link_to 'Add a Story', new_story_path, class: "button" %></p>
 
 <% @stories.each do |story| %>
