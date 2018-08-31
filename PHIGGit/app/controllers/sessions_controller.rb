@@ -10,14 +10,14 @@ class SessionsController < ApplicationController
       redirect_to user_path
     else
       flash[:error_message] = "Something went wrong. Please try again!"
-      redirect_to root_path
+      redirect_to new_session_path
     end
   end
 
   def destroy
     session[:user_id] = nil
     flash[:notice] = "You've been logged out"
-    redirect_to root_path
+    redirect_to story_path
   end
 
 end
