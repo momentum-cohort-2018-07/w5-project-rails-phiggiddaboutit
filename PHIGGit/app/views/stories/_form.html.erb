@@ -1,0 +1,38 @@
+<%= form_with model: @story, local: true do |form| %>
+
+  <% if @story.errors.any? %>
+    <div>
+      <h3>
+        <%= pluralize(@story.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h3>
+      <ul>
+        <% @story.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% elsif @save_success === 'Y' %>
+    <div>
+       <h3>Save Successful!</h3>
+      </div>
+    <% @save_success = '' %>
+  <% end %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %> 
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.label :img_url %><br>
+    <%= form.text_field :img_url %>
+  </p>
+  <p>
+    <% form.hidden_field :user_id, value: #current_user.id %>
+    <%= form.submit %>
+  </p>
+<% end %>
