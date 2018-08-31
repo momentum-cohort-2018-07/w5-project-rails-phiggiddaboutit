@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logged_banner {
+    padding: 5px;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+}
+
+.logged_in {
+    background-color: blue;
+}
+
+.logged_out {
+    background-color: crimson;
+}
+
+.logged_banner a:link,
+.logged_banner a:visited,
+.logged_banner a:hover,
+.logged_banner a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#logo_block {
+    width: 20%;
+    float: left;
+}
