@@ -9,6 +9,7 @@ class StoriesController < ApplicationController
     end
 
     def new
+        redirect_to new_session_path
         @story = Story.new
     end
 
