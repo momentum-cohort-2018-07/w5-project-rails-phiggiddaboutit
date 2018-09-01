@@ -13,8 +13,18 @@
     <div>
       <p><%= @story.text %></p>
     </div>
-    <%-# gene commenting%>
+    <section>
+        <%= form_for [@story, Comment.new] do |form|%>
+            <%= form.text_area :text, placeholder: "Comment" %>
+            <%= form.submit "Comment"%>
+        <%end%>
+    </section>
+    <ul>
+       <% @comments = @story.comments%>
+       <%= render(partial: 'comments/comment', collection: @story.comments)%>
+    </ul>
     
+
   </div>
 </div>
 
