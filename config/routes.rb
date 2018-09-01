@@ -10,10 +10,12 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get 'users/new'
+  resources :users
+
   root 'stories#index'
 
 
-get 'users/new'
-resources :users
+
 
 end
