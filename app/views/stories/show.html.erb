@@ -14,7 +14,7 @@
       <p><%= @story.text %></p>
     </div>
     <section>
-        <% @comments = @story.comments%>
+       
     </section>
     <section>
         <%= form_for [@story, Comment.new] do |form|%>
