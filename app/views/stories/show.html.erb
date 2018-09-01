@@ -2,17 +2,14 @@
 <p id="notice" class="alert alert-success" role="alert"><%= notice %></p>
 <% end %>
 
-<div>
-  <div>
-    <h1><%= @story.title %></h1>
-    <h6>By <%= @story.user_id %></h6>
-    <% begin %>
-      <%= image_tag "#{@story.img_url}" %>
-    <% rescue %>
-    <% end %>
-    <div>
-      <p><%= @story.text %></p>
+<div class="show_story_container">
+    <div class="show_story_headline"><%= @story.title %><%= link_to "#{image_tag 'giveaphigg.png', class: "givaphigg"}", Stories.vote %><%= @story.vote_count %></div>
+    <div class="show_story_byline">Added by <%= @story.user_id %> at <%= @story.created_at %>.</div>
+    <div class="show_story_body">
+        <div class="show_story_img_container"><%= image_tag "#{@story.img_url}", class: "show_story_image" %></div>
+        <div class="show_story_text"><%= @story.text %></div>
     </div>
+<<<<<<< HEAD
     <section>
        
     </section>
@@ -32,3 +29,30 @@
 </div>
 
 
+=======
+</div>
+
+<%# gene commenting%>
+
+<div id="comments_container">
+    <%=form_for :comment do |form| %>
+        <section>
+            <%= form.text_field :text %>
+        </section>
+    <% end %>
+    <% if @comments %>
+        <section>
+            <%= @comments.each do |comment|%>
+            <div>
+                <section class="comment-header"><strong><%=comment.username%></strong></strong>
+                <section class="comment-content">
+                    <p class="comment-content__text">
+                        <%=comment.text%>
+                    </p>
+                </section>
+            </div>
+            <% end %>
+        </section>
+    <% end %>
+</div>
+>>>>>>> development

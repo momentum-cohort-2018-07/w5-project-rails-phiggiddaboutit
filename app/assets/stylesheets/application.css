@@ -25,6 +25,11 @@ body {
     border-bottom: 2px solid #ffffff;
     text-align: center;
     color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 }
 
 .logged_in {
@@ -45,5 +50,8 @@ body {
 
 #logo_block {
     width: 20%;
-    float: left;
+}
+
+.logged_message {
+    flex-grow: 1;
 }
