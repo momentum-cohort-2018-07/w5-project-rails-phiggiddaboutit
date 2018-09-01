@@ -13,26 +13,9 @@
     <div>
       <p><%= @story.text %></p>
     </div>
+    <%-# gene commenting%>
+    
   </div>
 </div>
 
-<%-# gene commenting%>
 
-<div>
-<section><%=form_for(:comment ,url: ) |form| %>
-    <%= form.text_field     
-<% end %>
-</section>
-<section>
-    <%= comments.each do |comment|%>
-    <div>
-        <section class="comment-header"><strong><%=comment.username%></strong></strong>
-        <section class="comment-content">
-            <p class="comment-content__text>
-                <%=comment.text%>
-            </p>
-        </section>
-    </div>
-    <%end%>
-</section>
-</div>
