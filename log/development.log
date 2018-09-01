@@ -4171,3 +4171,193 @@ Processing by StoriesController#index as HTML
 Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.5ms)
 
 
+Started DELETE "/session" for 127.0.0.1 at 2018-09-01 12:41:10 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nGrff0KSAZiHaquE0WsiIiXgPi+v2firfiKvvkjholM/daXNOadixXIwnoiLlWGwYhk5Nr5q6TnW+xgkREivcg=="}
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:41:10 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:10
+  Rendered stories/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 42ms (Views: 34.3ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2018-09-01 12:41:14 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p6ta2NVxoXM8oaAuhg/JYOxIlrcL2PHRfN3AZLwGi6UEtCBqrkTCLsn7lSLc8Yryq7GRrhpr4EPUBHf+sK+GhA=="}
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:41:14 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:10
+  Rendered stories/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2018-09-01 12:42:01 -0400
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (2.3ms)
+  Rendered stories/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 27.0ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2018-09-01 12:42:02 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DQvGQBViMIDRpzyx3pCnNT4HfMguParXqV6rGLxSgBl/yn3vrQYtnKl7NEMz8WdvI8S2e0mRLw7OGbrXiSL03w==", "story"=>{"title"=>"", "text"=>"", "img_url"=>""}, "commit"=>"Create Story"}
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-09-01 12:42:02 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 23.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-09-01 12:42:15 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 23.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2018-09-01 12:42:20 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NLlq7NuTEmNAX4DuSCmitiAj6FfK1IhroWD0tbjeNMeXphBeoKZxPrUFteIS1+EkZ9rvTttnmfkJuUMvtHc55g==", "story"=>{"title"=>"", "text"=>"", "img_url"=>""}, "commit"=>"Create Story"}
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-09-01 12:42:20 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:43:27 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:10
+  Rendered stories/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2018-09-01 12:43:28 -0400
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (2.8ms)
+  Rendered stories/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:44:21 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:8
+  Rendered stories/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:44:37 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:6
+  Rendered stories/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2018-09-01 12:44:39 -0400
+Processing by StoriesController#new as HTML
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (2.0ms)
+  Rendered stories/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2018-09-01 12:44:40 -0400
+Processing by StoriesController#index as HTML
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories"[0m
+  ↳ app/views/stories/index.html.erb:6
+  Rendered stories/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-09-01 12:44:53 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 24.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-09-01 12:44:54 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-09-01 12:44:57 -0400
+Processing by SessionsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYo6M9U0Dfl64fNLdRRJ3ryp4nVRm/XJpLuJA0MTEe2N/fg9pdYNd3j1Trca1o5IDYQqOcFknDwhAsDkIrZ1hA==", "username"=>"", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Redirected to http://localhost:3000/session/new
+Completed 200 OK in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2018-09-01 12:44:57 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2018-09-01 12:45:00 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-09-01 12:45:01 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QqTDfPGpjhmu2ZF7QnHudt3Ku62px4MTq4Eoj1e0SYv+uM69tdJM0p9tZ1QDBFMvJv0UuQ3tfdYRffnPoW3uXQ==", "user"=>{"name"=>"", "username"=>"", "email"=>""}, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "commit"=>"Save User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
