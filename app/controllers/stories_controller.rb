@@ -9,8 +9,6 @@ class StoriesController < ApplicationController
     end
 
     def new
-=begin    redirect_to new_session_path if !
-=end
         @story = Story.new
     end
 
@@ -20,11 +18,10 @@ class StoriesController < ApplicationController
     
     def create
         @story = Story.new(story_params)
-
-        if @story.save
-            redirect_to @story
+        if !current_user
+          redirect_to new_session_path, notice: 'You must be logged in to add a story'
         else
-            render 'new'
+          redirect_to
         end
     end
 
