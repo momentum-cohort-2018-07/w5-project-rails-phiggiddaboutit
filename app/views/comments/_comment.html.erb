@@ -1,0 +1,8 @@
+
+<div>
+<section><%= form_for [comment, Comment.new ], url:comments_new_path do |form| %>
+    <%= form.text_field  :text%>
+    <%= form.submit 'Reply'%> 
+<% end %>
+</section>
+</div>
