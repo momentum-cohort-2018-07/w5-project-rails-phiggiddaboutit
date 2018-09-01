@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to story_path
+      redirect_to stories_path
     end
   end
 
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to user_path
+      redirect_to stories_path
     else
       flash[:error_message] = "Something went wrong. Please try again!"
       redirect_to new_session_path
