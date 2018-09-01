@@ -3,7 +3,7 @@
 <% end %>
 
 <div class="show_story_container">
-    <div class="show_story_headline"><%= @story.title %><%= image_tag 'giveaphigg.png', class: "givafig" %><%= @story.vote_count %></div>
+    <div class="show_story_headline"><%= @story.title %><%= link_to "#{image_tag 'giveaphigg.png', class: "givaphigg"}", Stories.vote %><%= @story.vote_count %></div>
     <div class="show_story_byline">Added by <%= @story.user_id %> at <%= @story.created_at %>.</div>
     <div class="show_story_body">
         <div class="show_story_img_container"><%= image_tag "#{@story.img_url}", class: "show_story_image" %></div>
