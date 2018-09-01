@@ -7,9 +7,9 @@ class CommentsController < ApplicationController
   def create
       @comment= @commentable.comments.new comment_params
       if @comment.save then
-        redirect_to :back, notice: 'Your comment was successfully posted!'
+        redirect_to story_path(1) 
       else
-        redirect_to :back, notice: 'Your comment was not posted!'  
+        redirect_to story_path(1)
       end
   end
   def destroy
