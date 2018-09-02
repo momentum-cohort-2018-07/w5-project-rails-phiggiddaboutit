@@ -3,5 +3,5 @@ class Comment < ApplicationRecord
 Hello Gene!! 
 =end 
 belongs_to :commentable, polymorphic: true
-  has_many :comments, as: :commentable
+has_many :comments, as: :commentable
 end

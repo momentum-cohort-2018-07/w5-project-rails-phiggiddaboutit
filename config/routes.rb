@@ -15,7 +15,12 @@ Rails.application.routes.draw do
 
   root 'stories#index'
 
-
+=begin
+  #please add
+  resources :comments do
+    resources :comments
+  end
+=end
 
 
 end

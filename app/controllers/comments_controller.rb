@@ -5,11 +5,12 @@ class CommentsController < ApplicationController
   end
 
   def create
+    
       @comment= @commentable.comments.new comment_params
       if @comment.save then
-        redirect_to story_path(1) 
+        redirect_to @commentable, notice: "Comment Saved!"
       else
-        redirect_to story_path(1)
+        redirect_to :back, notice: "Woops! Something went wrong!"
       end
   end
   def destroy

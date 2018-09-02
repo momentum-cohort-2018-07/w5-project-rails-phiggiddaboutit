@@ -17,22 +17,30 @@
 </div>
 
 <%-# gene commenting%>
-
 <div>
-<section><%=form_for(:comment ,url: ) |form| %>
-    <%= form.text_field     
+
+<section>
+
+<%= form_for [@story ,Comment.new] do |form| %>
+    <%= form.hidden_field :username, value: 'gradcliffe' %>
+    <%= form.text_area  :text, class:"form-control", placeholder: 'Add A Comment'%>   
+    <%= form.submit 'Add Comment', class:"btn btn-controller"%>
 <% end %>
 </section>
-<section>
-    <%= comments.each do |comment|%>
-    <div>
-        <section class="comment-header"><strong><%=comment.username%></strong></strong>
-        <section class="comment-content">
-            <p class="comment-content__text>
-                <%=comment.text%>
-            </p>
-        </section>
+
+</div>
+
+<div>
+<h3>Comments</h3>
+<% @story.comments.each do |comment| %>
+    <div class="">
+        <ul>
+            <li>
+            <p><%= "user: #{comment.username}"%></p>
+            <p><%= comment.text %></p>
+            </li>
+        </ul>
+        
     </div>
-    <%end%>
-</section>
+<%end%>
 </div>
