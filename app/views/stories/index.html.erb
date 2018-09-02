@@ -7,8 +7,8 @@
     <% @stories.each do |story| %>
     <div class="phigg_container">
         <div class="phigg_header"><%= story.title %> | <%= story.vote_count %></div>
+        <div class="phigg_footer">Created by: <%= story.username %> on <%= story.created_at %>.</div>
         <div class="phigg_body"><%= image_tag "#{story.img_url}", style: "size: 50px;" %></div>
-        <div class="phigg_footer">Created by: <%= story.user_id %> on <%= story.created_at %>.</div>
     </div>
     <% end %>
   </div>
