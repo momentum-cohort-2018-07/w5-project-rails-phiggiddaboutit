@@ -15,12 +15,12 @@ Rails.application.routes.draw do
 
   root 'stories#index'
 
-=begin
-  #please add
+
+  #Gene's addition
   resources :comments do
     resources :comments
   end
-=end
+
 
 
 end

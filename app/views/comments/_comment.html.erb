@@ -1,8 +1,6 @@
-
-<div>
-<section><%= form_for [comment, Comment.new ], url:comments_new_path do |form| %>
-    <%= form.text_field  :text%>
-    <%= form.submit 'Reply'%> 
+<div class="form-group">
+<%= form_for [commentable, Comment.new ] do |form| %>
+    <%= form.text_field  :text, class:"form-control", placeholder: "Reply"%>
+    <%= form.submit 'Reply', class:"btn btn-primary"%> 
 <% end %>
-</section>
 </div>
