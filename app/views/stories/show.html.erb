@@ -38,6 +38,10 @@
             <li>
             <p><%= "user: #{comment.username}"%></p>
             <p><%= comment.text %></p>
+            <% date = Time.now%>
+            <%total = date - comment.created_at%>
+        
+            <p><%= "Submitted: #{} ago"%>
             </li>
         </ul>
         
