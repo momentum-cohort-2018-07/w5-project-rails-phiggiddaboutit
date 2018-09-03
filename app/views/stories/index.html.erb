@@ -6,7 +6,11 @@
   <div class="left_side_wrapper">
     <% @stories.each do |story| %>
     <div class="phigg_container">
-        <div class="phigg_header"><%= link_to "#{story.title}", story_path(story.id)  %> | <%= story.vote_count %></div>
+        <div class="phigg_header"><%= link_to "#{story.title}", story_path(story.id)  %> | <%= link_to like_story_path(story), method: :put do %>
+              Upvote
+              <%= story.votes_for.size %>
+          <% end %>
+        </div>
         <div class="phigg_footer">Created by: <%= story.username %> on <%= story.created_at %>.</div>
         <div class="phigg_body"><%= image_tag "#{story.img_url}", style: "size: 50px;" %></div>
        
