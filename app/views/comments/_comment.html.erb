@@ -6,7 +6,8 @@
   username = user.username
   end
   %>
-   <%= form.hidden_field :username, value: username %>
+    <%= form.hidden_field :username, value: username %>
+    <%= form.hidden_field :story_id, value: story_id %>
     <%= form.text_field  :text, class:"form-control", placeholder: "Reply"%>
     <%= form.submit 'Reply', class:"btn btn-primary"%> 
 <% end %>
