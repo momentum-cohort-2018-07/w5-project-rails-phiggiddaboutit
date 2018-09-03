@@ -36,7 +36,7 @@
    <div class="">
        <ul>
            <li>
-           <p><%= "user: #{comment.username}"%></p>
+           <p><%= "User: #{comment.username}"%></p>
            <p><%= comment.text %></p>
            <% date = Time.now%>
            <%total = date - comment.created_at%>
@@ -60,7 +60,7 @@
                <ul>
                    <% comment.comments.each do |reply|%>
                    <li>
-                       <p><%= "User: {reply.username}"%></p>
+                       <p><%= "User: #{reply.username}"%></p>
                        <p><%= reply.text%></p>
                    </li>
                    <%end%>
