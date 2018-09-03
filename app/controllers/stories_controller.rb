@@ -45,7 +45,7 @@ class StoriesController < ApplicationController
         redirect_to stories_path
     end
 
-private
+  private
     def story_params
         params.require(:story).permit(:title, :text, :user_id, :img_url)
     end

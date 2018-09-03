@@ -1,11 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-    user = User.find_by_username(params[:username])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to stories_path
-    end
   end
 
   def create
