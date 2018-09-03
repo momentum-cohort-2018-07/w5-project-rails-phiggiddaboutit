@@ -18,7 +18,13 @@
 
 <div class=“form-group">
 <%= form_for [@story, Comment.new] do |form| %>
-   <%= form.hidden_field :username, value: "gene" %>
+  <%if current_user 
+    user = User.find_by_id(session[:user_id])
+  
+  username = user.username
+  end
+  %>
+   <%= form.hidden_field :username, value: username %>
    <%= form.text_area  :text, class:"form-control", placeholder: 'Comment'%>
    <%= form.submit "Add Comment", class:"btn btn-controller" %>
   <% end %>

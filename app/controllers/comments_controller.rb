@@ -5,14 +5,15 @@ class CommentsController < ApplicationController
   end
 
   def create
- 
-      @comment= @commentable.comments.new comment_params
-      if @comment.save then
-        redirect_to @commentable, notice: "You have commented!"
-      else
-        redirect_to @commentable, notice: "Woops! Something went wrong!"
-      end
+    if !current_user then 
+      redirect_to new_session_path, notice: 'You must be logged in to add a comment'
+    else
+    @comment= @commentable.comments.new comment_params
+    @comment.save 
+    redirect_to @comment
+    end
   end
+
   def destroy
   end
 
@@ -27,7 +28,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:text, :username)
   end
 
   def find_comment_parent
