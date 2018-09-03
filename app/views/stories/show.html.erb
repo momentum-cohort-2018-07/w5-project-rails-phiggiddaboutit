@@ -16,52 +16,51 @@
   </div>
 </div>
 
-<%-# gene commenting%>
-<div class=“form-group”>
-<%= form_for [@story ,Comment.new] do |form| %>
-   <%= form.hidden_field :username, value: ‘gene’ %>
-   <%= form.text_area  :text, class:“form-control”, placeholder: ‘Comment’%>
-   <%= form.submit ‘Add Comment’, class:“btn btn-controller”%>
-<% end %>
+<div class=“form-group">
+<%= form_for [@story, Comment.new] do |form| %>
+   <%= form.hidden_field :username, value: "gene" %>
+   <%= form.text_area  :text, class:"form-control", placeholder: 'Comment'%>
+   <%= form.submit "Add Comment", class:"btn btn-controller" %>
+  <% end %>
 </div>
 
 <div>
 <h3>Comments</h3>
 <% @story.comments.each do |comment| %>
-   <div class=“”>
+   <div class="">
        <ul>
            <li>
-           <p><%= “user: #{comment.username}“%></p>
+           <p><%= "user: #{comment.username}"%></p>
            <p><%= comment.text %></p>
            <% date = Time.now%>
            <%total = date - comment.created_at%>
            <%
                if total <=1800 then
                    diff = (total / 1.second).round
-                   message = “seconds ago”
+                   message = "seconds ago"
                elsif total > 1800 && total < 3600
                    diff = (total / 1.minute).round
-                   message = “minutes ago”
+                   message = "minutes ago"
                elsif total > 3600 && total < 86340
                    diff = (total / 1.hour).round
-                   message = “hours ago”
+                   message = "hours ago"
                elsif total >= 86341
                    diff = (total / 1.day).round
-                   message = “days ago”
+                   message = "days ago"
                end
            %>
-           <p><%= “Submitted: #{diff} ” + message%>
+           <p><%= "Submitted: #{diff} " + message%>
            <% if !comment.comments.empty? %>
                <ul>
                    <% comment.comments.each do |reply|%>
                    <li>
-                       <p><%= “User: #{reply.username}“%></p>
+                       <p><%= "User: {reply.username}"%></p>
                        <p><%= reply.text%></p>
                    </li>
                    <%end%>
                </ul>
-           <% end%>
-           <%= render partial: ‘comments/comment’, locals:{commentable: comment}%>
+           <%end%>
+           <%= render partial: "comments/comment", locals:{commentable: comment}%>
            </li>
        </ul>
 
