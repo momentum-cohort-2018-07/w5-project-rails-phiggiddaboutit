@@ -1,0 +1,6 @@
+<div class="form-group">
+<%= form_for [commentable, Comment.new ] do |form| %>
+    <%= form.text_field  :text, class:"form-control", placeholder: "Reply"%>
+    <%= form.submit 'Reply', class:"btn btn-primary"%> 
+<% end %>
+</div>

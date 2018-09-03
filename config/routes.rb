@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   root 'stories#index'
 
 
+  #Gene's addition
+  resources :comments do
+    resources :comments
+  end
+
 
 
 end
