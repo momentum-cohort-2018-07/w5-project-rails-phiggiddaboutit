@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 2018_09_02_221244) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "commentable_type"
+    t.integer "commentable_id"
+    t.integer "story_id"
   end
 
   create_table "stories", force: :cascade do |t|
