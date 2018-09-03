@@ -19,7 +19,7 @@
 <%-# gene commenting%>
 <div class="form-group">
 <%= form_for [@story ,Comment.new] do |form| %>
-    <%= form.hidden_field :username, value: 'gradcliffe' %>
+    <%= form.hidden_field :username, value: 'gene' %>
     <%= form.text_area  :text, class:"form-control", placeholder: 'Comment'%>   
     <%= form.submit 'Add Comment', class:"btn btn-controller"%>
 <% end %>
