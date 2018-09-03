@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
   def show
     
     find_comment_parent
-    redirect_to "/stories/#{@commentable.commentable_id}"
+    redirect_to "/stories/#{@commentable.story_id}"
   end
 
   def edit
@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:text, :username)
+    params.require(:comment).permit(:text, :username, :story_id)
   end
 
   def find_comment_parent
