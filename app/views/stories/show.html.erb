@@ -7,7 +7,7 @@
 <div>
   <div>
     <h1><%= @story.title %></h1>
-    <h6>By <%= @story.user_id %></h6>
+    <h6>By <%= @story.username %></h6>
     <% begin %>
       <%= image_tag "#{@story.img_url}" %>
     <% rescue %>
