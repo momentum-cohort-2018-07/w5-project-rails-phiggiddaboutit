@@ -45,9 +45,15 @@ class StoriesController < ApplicationController
         redirect_to stories_path
     end
 
+    def upvote 
+        @story_upvote = Story.find(params[:id])
+        @story_upvote.upvote_by current_user
+        redirect_to stories_path
+      end
+
   private
     def story_params
-        params.require(:story).permit(:title, :text, :user_id, :img_url)
+        params.require(:story).permit(:title, :text, :user_id, :img_url, :username)
     end
 
 end
